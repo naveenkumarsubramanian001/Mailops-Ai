@@ -1,0 +1,43 @@
+[
+    {
+        "id": "medical_fake_01",
+        "scenario": "Employee submits a clearly forged medical certificate (mismatched fonts, blurry seal).",
+        "intent": "medical_leave",
+        "verification_result": {
+            "verdict": "Fake",
+            "trust_score": 15,
+            "evidence": [
+                "[P1 L1] Font mismatch on 'Dr. Smith'",
+                "[P1 L5] Seal is pixelated/copy-pasted"
+            ]
+        },
+        "ideal_response": "Subject: [Action Required] Medical Leave Request Denied - Verification Failed\n\nDear HR Admin,\n\nWe have reviewed the medical leave request for [Employee Name].\n\n**Verification Findings**:\nThe submitted document has been flagged as **FAKE** (Trust Score: 15/100). \n\n**Evidence**:\n- [P1 L1] Font mismatch on 'Dr. Smith' indicates potential editing.\n- [P1 L5] Seal appears pixelated and inconsistent with original documents.\n\n**Policy Compliance**:\nUnder the 'Medical Leave & Document Verification Policy', submission of falsified documents is a serious violation (Section 4.1). This triggers an immediate disciplinary review.\n\n**Recommended Action**:\n1. **Reject** the leave request immediately.\n2. **Initiate Disciplinary Action** per the Code of Conduct.\n3. Schedule a meeting with the employee to discuss these findings.\n\nBest regards,\nMailops AI Assistant"
+    },
+    {
+        "id": "disciplinary_theft_01",
+        "scenario": "Report of an employee stealing office supplies (Monitor).",
+        "intent": "issue",
+        "verification_result": {
+            "verdict": "Genuine",
+            "trust_score": 90,
+            "evidence": [
+                "[P1 L2] Security Camera Log: 2026-01-04 18:30",
+                "[P1 L3] Item: Dell Monitor removed from Desk 4"
+            ]
+        },
+        "ideal_response": "Subject: [URGENT] Disciplinary Report: Theft of Company Property\n\nDear HR Admin,\n\nAn issue report regarding potential theft of company property has been received and verified.\n\n**Verification Findings**:\nThe attached Security Camera Log is **GENUINE** (Trust Score: 90).\n\n**Evidence**:\n- [P1 L2] Security Camera Log: 2026-01-04 18:30 confirms presence after hours.\n- [P1 L3] Item: Dell Monitor removed from Desk 4 matching the missing asset.\n\n**Policy Compliance**:\nThis action violates the 'Code of Conduct & Disciplinary Actions' policy, specifically 'Theft or misuse of company property' (Gross Misconduct).\n\n**Recommended Action**:\n**Immediate Suspension** pending formal investigation. We recommend involving Legal Counsel as this may warrant termination under the Zero Tolerance clause.\n\nBest regards,\nMailops AI Assistant"
+    },
+    {
+        "id": "harassment_01",
+        "scenario": "Employee reports verbal harassment by a manager.",
+        "intent": "issue",
+        "verification_result": {
+            "verdict": "Genuine",
+            "trust_score": 85,
+            "evidence": [
+                "[P1 L4] Email Thread: 'You are useless' sent at 11:00 PM"
+            ]
+        },
+        "ideal_response": "Subject: [Confidential] Harassment Complaint - Initial Assessment\n\nDear HR Admin,\n\nA sensitive report regarding verbal harassment has been received.\n\n**Verification Findings**:\nThe submitted email evidence appears **GENUINE** (Trust Score: 85) and validates the timeline of events.\n\n**Evidence**:\n- [P1 L4] Email Thread: 'You are useless' sent at 11:00 PM, corroborating the complaint.\n\n**Policy Compliance**:\nThis behavior contradicts the 'Workplace Respect & Anti-Harassment Policy'. Aurex maintains a safe working environment for all employees.\n\n**Recommended Action**:\n1. **Open a Formal Case File** immediately.\n2. Ensure the reporting employee is protected from retaliation.\n3. Schedule a private interview with the claimant.\n\n*Note: Retrieve all communication logs for the investigation.*\n\nBest regards,\nMailops AI Assistant"
+    }
+]
